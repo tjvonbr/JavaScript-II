@@ -23,11 +23,20 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   });
 
 */
-
+function higherOrderFunction(x, y, cb) {
+  return cb(x, y);
+}
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return callback(arr.length);
 }
+
+const itemLength = getLength(items, function(length) {
+  return length * 10;
+});
+
+console.log(itemLength);
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
